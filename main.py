@@ -7,7 +7,7 @@ class Game:
 		  
 		# general setup
 		pygame.init()
-		self.screen = pygame.display.set_mode((WIDTH,HEIGTH))
+		self.screen = pygame.display.set_mode((WIDTH,HEIGHT))
 		pygame.display.set_caption('Like a Zelda')
 		self.clock = pygame.time.Clock()
 		self.level = Level()
@@ -17,7 +17,7 @@ class Game:
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					pygame.quit()
-					sys.exit()
+					sys.exit() 
 
 			self.screen.fill('black')
 			self.level.run()
